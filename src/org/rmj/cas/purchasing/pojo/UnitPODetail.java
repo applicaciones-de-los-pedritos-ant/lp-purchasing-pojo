@@ -45,6 +45,9 @@ public class UnitPODetail implements Serializable, GEntity {
     @Column(name = "dModified")
     @Temporal(TemporalType.TIMESTAMP)
     private Date dModified;
+    
+    @Column(name = "nQuantity")
+    private Number nQtyOnHnd;
 
     LinkedList laColumns = null;
     
@@ -53,6 +56,7 @@ public class UnitPODetail implements Serializable, GEntity {
         this.nEntryNox = -1;
         this.sStockIDx = "";
         this.nQuantity = 0;
+        this.nQtyOnHnd = 0;
         this.nUnitPrce = 0.00;
         this.nReceived = 0;
         this.nCancelld = 0;
@@ -66,6 +70,7 @@ public class UnitPODetail implements Serializable, GEntity {
         laColumns.add("nReceived");
         laColumns.add("nCancelld");
         laColumns.add("dModified");
+        laColumns.add("nQtyOnHnd");
 
     }
     
@@ -126,6 +131,14 @@ public class UnitPODetail implements Serializable, GEntity {
         return dModified;
     }
     
+    public void setQtyOnHnd(Number nQtyOnHnd){
+        this.nQtyOnHnd = nQtyOnHnd;
+    }
+    public Number getQtyOnHnd(){
+        return nQtyOnHnd;
+    }
+    
+    
     @Override
     public int hashCode(){
         int hash = 0;
@@ -162,6 +175,7 @@ public class UnitPODetail implements Serializable, GEntity {
             case 6: return nReceived;
             case 7: return nCancelld;
             case 8: return dModified;
+            case 9: return nQtyOnHnd;
             default: return null;
         }
     }
@@ -205,6 +219,7 @@ public class UnitPODetail implements Serializable, GEntity {
             case 6: nReceived = (Number) foValue; break;
             case 7: nCancelld = (Number) foValue; break;
             case 8: dModified = (Date) foValue; break;
+            case 9: nQtyOnHnd = (Number) foValue; break;
         }    
     }
 
