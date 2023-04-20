@@ -46,7 +46,7 @@ public class UnitPODetail implements Serializable, GEntity {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dModified;
     
-    @Column(name = "nQuantity")
+    @Column(name = "nQtyOnHnd")
     private Number nQtyOnHnd;
 
     LinkedList laColumns = null;
