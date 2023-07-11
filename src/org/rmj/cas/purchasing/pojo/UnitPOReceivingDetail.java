@@ -58,6 +58,9 @@ public class UnitPOReceivingDetail implements Serializable, GEntity {
     @Column(name = "dModified")
     @Temporal(TemporalType.TIMESTAMP)
     private Date dModified;
+    
+    @Column(name = "sBrandNme")
+    private String sBrandNme;
 
     LinkedList laColumns = null;
     
@@ -72,6 +75,7 @@ public class UnitPOReceivingDetail implements Serializable, GEntity {
         this.nUnitPrce = 0.00;
         this.nFreightx = 0.00;
         this.dExpiryDt = java.util.Calendar.getInstance().getTime();
+        this.sBrandNme = "";
         
         laColumns = new LinkedList();
         laColumns.add("sTransNox");
@@ -85,6 +89,7 @@ public class UnitPOReceivingDetail implements Serializable, GEntity {
         laColumns.add("nFreightx");
         laColumns.add("dExpiryDt");
         laColumns.add("dModified");
+        laColumns.add("sBrandNme");
 
     }
     
@@ -165,6 +170,14 @@ public class UnitPOReceivingDetail implements Serializable, GEntity {
         return dModified;
     }
     
+    public String getBrandNme() {
+        return sBrandNme;
+    }
+
+    public void setBrandNme(String sBrandNme) {
+        this.sBrandNme = sBrandNme;
+    }
+    
     @Override
     public int hashCode(){
         int hash = 0;
@@ -204,6 +217,7 @@ public class UnitPOReceivingDetail implements Serializable, GEntity {
             case 9: return nFreightx;
             case 10: return dExpiryDt;
             case 11: return dModified;
+            case 12: return sBrandNme;
             default: return null;
         }
     }
@@ -250,6 +264,7 @@ public class UnitPOReceivingDetail implements Serializable, GEntity {
             case 9: nFreightx = (Number) foValue; break;
             case 10: dExpiryDt = (Date) foValue; break;
             case 11: dModified = (Date) foValue; break;
+            case 12: sBrandNme = (String) foValue; break;
         }    
     }
 

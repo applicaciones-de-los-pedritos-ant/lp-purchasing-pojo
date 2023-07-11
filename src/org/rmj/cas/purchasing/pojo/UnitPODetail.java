@@ -48,6 +48,9 @@ public class UnitPODetail implements Serializable, GEntity {
     
     @Column(name = "nQtyOnHnd")
     private Number nQtyOnHnd;
+    
+    @Column(name = "sBrandNme")
+    private String sBrandNme;
 
     LinkedList laColumns = null;
     
@@ -55,6 +58,7 @@ public class UnitPODetail implements Serializable, GEntity {
         this.sTransNox = "";
         this.nEntryNox = -1;
         this.sStockIDx = "";
+        this.sBrandNme = "";
         this.nQuantity = 0;
         this.nQtyOnHnd = 0;
         this.nUnitPrce = 0.00;
@@ -71,6 +75,7 @@ public class UnitPODetail implements Serializable, GEntity {
         laColumns.add("nCancelld");
         laColumns.add("dModified");
         laColumns.add("nQtyOnHnd");
+        laColumns.add("sBrandNme");
 
     }
     
@@ -138,6 +143,15 @@ public class UnitPODetail implements Serializable, GEntity {
         return nQtyOnHnd;
     }
     
+
+    public String getBrandNme() {
+        return sBrandNme;
+    }
+
+    public void setBrandNme(String sBrandNme) {
+        this.sBrandNme = sBrandNme;
+    }
+    
     
     @Override
     public int hashCode(){
@@ -176,6 +190,7 @@ public class UnitPODetail implements Serializable, GEntity {
             case 7: return nCancelld;
             case 8: return dModified;
             case 9: return nQtyOnHnd;
+            case 10: return sBrandNme;
             default: return null;
         }
     }
@@ -220,6 +235,7 @@ public class UnitPODetail implements Serializable, GEntity {
             case 7: nCancelld = (Number) foValue; break;
             case 8: dModified = (Date) foValue; break;
             case 9: nQtyOnHnd = (Number) foValue; break;
+            case 10: sBrandNme = (String) foValue; break;
         }    
     }
 
