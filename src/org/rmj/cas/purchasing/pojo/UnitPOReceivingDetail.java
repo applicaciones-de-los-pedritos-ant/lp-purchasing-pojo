@@ -254,7 +254,7 @@ public class UnitPOReceivingDetail implements Serializable, GEntity {
     public void setValue(int fnColumn, Object foValue) {
         switch(fnColumn){
             case 1: sTransNox = (String) foValue; break;
-            case 2: nEntryNox = (int) foValue; break;
+            case 2: nEntryNox = Integer.parseInt(foValue.toString()); break;
             case 3: sOrderNox = (String) foValue; break;
             case 4: sStockIDx = (String) foValue; break;
             case 5: sReplacID = (String) foValue; break;
