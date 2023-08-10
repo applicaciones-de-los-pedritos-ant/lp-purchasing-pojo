@@ -259,7 +259,7 @@ public class UnitPOReceivingDetail implements Serializable, GEntity {
             case 4: sStockIDx = (String) foValue; break;
             case 5: sReplacID = (String) foValue; break;
             case 6: cUnitType = (String) foValue; break;
-            case 7: nQuantity = (Number) foValue; break;
+            case 7: nQuantity = (Number) Double.valueOf(foValue.toString()); break;
             case 8: nUnitPrce = (Number) foValue; break;
             case 9: nFreightx = (Number) foValue; break;
             case 10: dExpiryDt = (Date) foValue; break;

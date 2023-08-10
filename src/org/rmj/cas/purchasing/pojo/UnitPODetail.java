@@ -234,7 +234,7 @@ public class UnitPODetail implements Serializable, GEntity {
             case 6: nReceived = (Number) foValue; break;
             case 7: nCancelld = (Number) foValue; break;
             case 8: dModified = (Date) foValue; break;
-            case 9: nQtyOnHnd = (Number) foValue; break;
+            case 9: nQtyOnHnd = (Number) Double.valueOf(foValue.toString()); break;
             case 10: sBrandNme = (String) foValue; break;
         }    
     }

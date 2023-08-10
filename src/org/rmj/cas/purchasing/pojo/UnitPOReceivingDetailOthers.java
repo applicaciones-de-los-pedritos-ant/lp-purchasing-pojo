@@ -159,8 +159,8 @@ public class UnitPOReceivingDetailOthers implements Serializable, GEntity {
     public void setValue(int fnColumn, Object foValue) {
         switch(fnColumn){
             case 1: sStockIDx = (String) foValue; break;
-            case 2: nQtyOnHnd = (Number) foValue; break;
-            case 3: xQtyOnHnd = (Number) foValue; break;
+            case 2: nQtyOnHnd = (Number) Double.valueOf(foValue.toString()); break;
+            case 3: xQtyOnHnd = (Number) Double.valueOf(foValue.toString()); break;
             case 4: nResvOrdr = (Number) foValue; break;
             case 5: nBackOrdr = (Number) foValue; break;
             case 6: nReorderx = (Number) foValue; break;
