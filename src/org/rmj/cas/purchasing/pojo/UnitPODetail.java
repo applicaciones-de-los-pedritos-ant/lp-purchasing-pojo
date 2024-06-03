@@ -111,7 +111,7 @@ public class UnitPODetail implements Serializable, GEntity {
     public void setUnitPrice(double nUnitPrce){
         this.nUnitPrce = nUnitPrce;
     }
-    public Number setUnitPrice(){
+    public Number getUnitPrice(){
         return nUnitPrce;
     }
     
