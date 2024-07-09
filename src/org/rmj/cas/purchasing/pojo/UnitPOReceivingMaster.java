@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.rmj.appdriver.agentfx.CommonUtils;
 import org.rmj.appdriver.constants.TransactionStatus;
 import org.rmj.appdriver.iface.GEntity;
 
