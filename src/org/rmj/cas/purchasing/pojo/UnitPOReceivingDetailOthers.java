@@ -48,6 +48,10 @@ public class UnitPOReceivingDetailOthers implements Serializable, GEntity {
     @Column(name = "xDescript")
     private String xDescript;
     
+    
+    @Column(name = "nOrdrQtyx")
+    private Number nOrdrQtyx;
+    
     /**
      * added by jovanalic
      * since 2021-07-2
@@ -69,6 +73,7 @@ public class UnitPOReceivingDetailOthers implements Serializable, GEntity {
         this.xBarCodex = "";
         this.xDescript = "";
         this.sMeasurNm = "";
+        this.nOrdrQtyx = 0;
         
         laColumns = new LinkedList();
         laColumns.add("sStockIDx");
@@ -82,6 +87,7 @@ public class UnitPOReceivingDetailOthers implements Serializable, GEntity {
         laColumns.add("xBarCodex");
         laColumns.add("xDescript");
         laColumns.add("sMeasurNm");
+        laColumns.add("nOrdrQtyx");
     }
     
     public UnitPOReceivingDetailOthers(){
@@ -123,6 +129,7 @@ public class UnitPOReceivingDetailOthers implements Serializable, GEntity {
             case 9: return xBarCodex;
             case 10: return xDescript;
             case 11: return sMeasurNm;
+            case 12: return nOrdrQtyx;
             default: return null;           
         }
     }
@@ -169,6 +176,7 @@ public class UnitPOReceivingDetailOthers implements Serializable, GEntity {
             case 9: xBarCodex = (String) foValue; break;
             case 10: xDescript = (String) foValue; break;
             case 11: sMeasurNm = (String) foValue; break;
+            case 12: nOrdrQtyx = (Number) foValue; break;
         }    
     }
 
